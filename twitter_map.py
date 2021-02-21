@@ -37,7 +37,6 @@ def twitter_friends_info(bearer_token: str, screen_name: str):
         search_url, headers=search_headers, params=search_params)
     data = response.json()
     return data
-#print(twitter_friends_info('AAAAAAAAAAAAAAAAAAAAALecMwEAAAAAgAGC0su1RiKLfYFl%2F%2BoXr9%2Bxq6o%3DjuELNjtNuO87SvVk9e5bb1LLIUtjRgVrIzRMhRwKOJWq2aUcHZ', '@liverpooloneluv'))
 
 
 def get_user_info(data):
