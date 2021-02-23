@@ -41,6 +41,8 @@ def twitter_friends_info(bearer_token: str, screen_name: str):
 
 def get_user_info(data):
     """
+    This functions returns an information about user's friends (screen_name,
+    the location (latitude, longitude))
     """
     users_info = []
     for user in data['users']:
@@ -95,6 +97,9 @@ def home_page():
 @app.route("/map", methods=["POST"])
 def build_map():
     """
+    This function creates an HTML file - map with locations of user's friends.
+    if the user does not input screen_name or bearer_token the
+    function creates failure.html.
     """
     try:
         bearer_token = request.form.get("bearer_token")
